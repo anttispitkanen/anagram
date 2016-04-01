@@ -1,0 +1,8 @@
+<h2>Create a new post!</h2>
+
+<!-- Note that simple_form_for must be set as output to be shown, not just the fields -->
+<%= simple_form_for @post do |f| %>
+  <%= f.input :image %>
+  <%= f.input :caption %>
+  <%= f.button :submit %>
+<% end %>
