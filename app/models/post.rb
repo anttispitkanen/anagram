@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :image, presence: true
-  validates :caption, presence: true, length: { minimum: 1, maximum: 1600 }
+  validates :caption, presence: true, length: { minimum: 3, maximum: 300 }
 
   belongs_to :user
   has_many :comments, dependent: :destroy
