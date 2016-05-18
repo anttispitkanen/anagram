@@ -93,11 +93,13 @@ body {
       color: #A5A7AA;
       float: right;
     }
-} .image {
+  }
+  .image {
     border-bottom: 1px solid #eeefef;
     border-top: 1px solid #eeefef;
   }
 }
+
 .post-bottom {
   .user-name, .comment-content {
     display: inline;
@@ -169,13 +171,13 @@ body {
 .registration-bg {
   padding-top: 4em;
   height: 100%;
-  width: 100%;
+  /*width: 100%;*/
   background-image: image-url('trees.jpg');
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  box-sizing: content-box;;
+  /*box-sizing: content-box;*/
 }
 .log-in{
   margin-left: auto;
@@ -189,5 +191,50 @@ body {
 .panel-heading{
   h1 {
     text-align: center;
+  }
+}
+
+.login-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('lotsatrees.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#image-preview {
+  margin: 0px auto;
+}
+
+#post_image {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
   }
 }

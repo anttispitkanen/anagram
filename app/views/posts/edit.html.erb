@@ -1,15 +1,12 @@
 
-<!-- Note that simple_form_for must be set as output to be shown, not just the fields -->
-<div class="text-center">
-  <%= image_tag @post.image.url(:medium) %>
-</div>
+<!-- Note to self: simple_form_for must be set as output, not just the fields -->
 
 <%= render 'form' %>
 
-  <div class="text-center edit-links">
-    <%= link_to "Delete post", post_path(@post), method: :delete,
-    data: { confirm: "Are you sure?" } %>
-    |
-    <%= link_to "cancel", posts_path %>
+<div class="text-center edit-links">
+  <%= link_to "Delete post", post_path(@post), method: :delete,
+  data: { confirm: "Are you sure?" } %>
+  |
+  <%= link_to "cancel", posts_path %>
 
-  </div>
+</div>

@@ -1,5 +1,9 @@
 <div id="#comment">
-  <div class="user-name"> <%= comment.user.user_name %> </div>
+  <div class="user-name">
+    <% if comment.user %>
+      <%= comment.user.user_name %>
+    <% end %>
+  </div>
   <div class="comment-content"> <%= comment.content %> </div>
 
   <% if comment.user == current_user %>
