@@ -16,13 +16,49 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  height: 100%;
+}
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  background-image: image-url('trees.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+.panel {
+  border-radius: 8px;
+}
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+}
+
+.alert {
+  margin-bottom: 0px;
+}
+
 body {
   background-color: #fafafa;
-  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica,
-sans-serif;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 /* ## NAVBAR CUSTOMISATIONS ## */
-.navbar-brand { a{
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  a {
     color: #125688;
   }
 }
@@ -45,6 +81,7 @@ sans-serif;
   max-width: 642px;
   width: 100%;
 }
+
 .post {
   background-color: #fff;
   border-color: #edeeee;
@@ -66,8 +103,8 @@ sans-serif;
     }
     .user-name {
       font-weight: 500;
-} .time-ago {
-  color: #A5A7AA;
+    } .time-ago {
+      color: #A5A7AA;
       float: right;
     }
 } .image {
