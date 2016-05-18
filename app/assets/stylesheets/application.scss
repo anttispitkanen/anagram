@@ -19,29 +19,7 @@
 html {
   height: 100%;
 }
-.registration-bg {
-  padding-top: 4em;
-  height: 100%;
-  background-image: image-url('trees.jpg');
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.log-in{
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  border: none;
-}
-.panel {
-  border-radius: 8px;
-}
-.panel-heading{
-  h1 {
-    text-align: center;
-  }
-}
+
 
 .alert {
   margin-bottom: 0px;
@@ -50,6 +28,14 @@ html {
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+.container {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  width: auto;
+  height: 100%;
 }
 /* ## NAVBAR CUSTOMISATIONS ## */
 
@@ -178,4 +164,30 @@ body {
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.registration-bg {
+  padding-top: 4em;
+  height: 100%;
+  width: 100%;
+  background-image: image-url('trees.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  box-sizing: content-box;;
+}
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  border: none;
+}
+.panel {
+  border-radius: 8px;
+}
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
 }
