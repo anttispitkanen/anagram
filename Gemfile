@@ -29,6 +29,7 @@ gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
 gem 'kaminari'
+gem 'jquery-turbolinks'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

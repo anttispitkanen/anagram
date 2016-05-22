@@ -4,7 +4,10 @@
       <%= comment.user.user_name %>
     <% end %>
   </div>
-  <div class="comment-content"> <%= comment.content %> </div>
+
+  <div class="comment-content">
+    <%= comment.content %>
+  </div>
 
   <% if comment.user == current_user %>
     <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Really want to delete?" }, remote: true do %>

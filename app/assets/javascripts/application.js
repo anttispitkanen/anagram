@@ -14,5 +14,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.turbolinks
+
 //= require bootstrap-sprockets
+
 //= require_tree .
+
+/*
+$(document).ready(function() {
+  if (!$('#load_more').length//) {
+                || $('#load_more').length < 1) {
+    $('#paginator').remove();
+  };
+});
+*/
