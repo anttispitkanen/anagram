@@ -9,8 +9,8 @@ var loadFile = function(event) {
 };
 
 $(document).ready(function() {
-  if (!$('#load_more').length//) {
+/*  if (!$('#load_more').length//) {
                 || $('#load_more').length < 1) {
     $('#paginator').remove();
-  };
+  }; */
 });

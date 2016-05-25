@@ -21,14 +21,17 @@
 
         <div class="comments" id="comments_<%= post.id %>">
           <% if post.comments.any? %>
-            <div class="paginator" id="comments-paginator-<%= post.id %>">
-              <% unless post.comments.count <= 4 %>
+            <% unless post.comments.count <= 4 %>
+              <div class="paginator" id="comments-paginator-<%= post.id %>">
                 <%= link_to "See all #{post.comments.count} comments", post_comments_path(post),
-                            remote: true, class: 'more-comments', data: { post_id: "#{post.id}", type: "html" } %>
-              <% end %>
+                            remote: true, class: 'more-comments', id: "more_comments_#{post.id}",
+                            data: { post_id: "#{post.id}", type: "html", value: "#{post.comments.count}" } %>
+                            <!-- added the id and the data value attribute here -->
+              </div>
+            <% end %>
 
 
-            </div> <!-- this /div was missing god damn I looked for it -->
+
             <%= render post.comments.last(4), post: post %>
           <% end %>
         </div>
