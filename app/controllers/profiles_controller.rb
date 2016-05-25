@@ -1,5 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :set_user
+  before_action :authenticate_user!
+  before_action :owned_profile, only: [:edit, :update]
 
   def show
     @posts = @user.posts.order('created_at DESC')
@@ -28,6 +30,13 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:user).permit(:avatar, :bio)
+  end
+
+  def owned_profile
+    unless current_user == @user
+      flash[:alert] = "That's not your profile!"
+      redirect_to root_path
+    end
   end
 
 end
