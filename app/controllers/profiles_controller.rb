@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
 
   def owned_profile
     unless current_user == @user
-      flash[:alert] = "That's not your profile!"
+      flash[:alert] = "You can only edit your own profile!"
       redirect_to root_path
     end
   end

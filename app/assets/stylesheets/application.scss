@@ -20,16 +20,16 @@ html {
   height: 100%;
 }
 
-
-.alert {
-  margin-bottom: 0px;
-}
-
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   height: 100%;
 }
+
+.alert {
+  margin-bottom: 0px;
+}
+
 
 .container {
   margin: 0px 0px 0px 0px;
@@ -37,6 +37,8 @@ body {
   width: auto;
   height: 100%;
 }
+
+
 /* ## NAVBAR CUSTOMISATIONS ## */
 
 .navbar {
@@ -51,13 +53,14 @@ body {
 
 .navbar-default {
   background-color: #fff;
-  height: 54px;
+  /*height: 54px;*/
   .navbar-nav li a {
     color: #125688;
   }
 }
 .navbar-container {
-  width: 70%;
+  /*width: 70%;*/
+  max-width: 640px;
   margin: 0 auto;
 }
 /* ## POST CUSTOMISATIONS ## */
@@ -89,7 +92,8 @@ body {
     }
     .user-name {
       font-weight: 500;
-    } .time-ago {
+    }
+    .time-ago {
       color: #A5A7AA;
       float: right;
     }
@@ -109,7 +113,7 @@ body {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
+    /*margin-right: 0.3em;*/
     color: #125688;
     font-size: 15px;
   }
@@ -155,6 +159,7 @@ body {
   justify-content: center;
 }
 /* ## Wrapper and styling for the new and edit views ## */
+
 .form-wrapper {
   width: 60%;
   margin: 20px auto;
@@ -163,6 +168,7 @@ body {
   border: 1px solid #eeefef;
   border-radius: 3px;
 }
+
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
@@ -171,7 +177,7 @@ body {
 .registration-bg {
   padding-top: 4em;
   height: 100%;
-  /*width: 100%;*/
+  width: 100%;
   background-image: image-url('trees.jpg');
   -moz-background-size: cover;
   -webkit-background-size: cover;
@@ -248,10 +254,6 @@ body {
   }
 }
 
-#user_avatar {
-  margin: 20px auto;
-}
-
 .profile-header {
   padding: 20px 0;
 }
@@ -273,4 +275,28 @@ body {
 }
 .profile-bio {
   margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 20px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
 }

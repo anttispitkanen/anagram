@@ -13,6 +13,7 @@
       </div>
 
       <div class="post-bottom">
+        <%= render 'posts/likes', post: post %>
         <div class="caption">
           <div class="caption-content">
             <div class="user-name">
@@ -43,8 +44,11 @@
 
         <div class="comment-like-form row">
           <div class="like-button col-sm-1">
-            <span class="glyphicon glyphicon-heart-empty"></span>
+            <%= link_to '', post_like_link(post), remote: true, id: "like_#{post.id}", class: "like glyphicon #{liked_post(post)}" %>
+            <!-- like_post_path(post.id) -->
+            <!-- post_like_link(post) -->
           </div>
+
           <div class="comment-form col-sm-11">
             <%= form_for([post, post.comments.build], remote: true) do |f| %>
               <%= f.text_field :content, placeholder: 'Write a witty comment here...', class: "comment_content", id: "comment_content_#{post.id}" %>
