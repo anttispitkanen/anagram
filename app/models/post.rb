@@ -5,6 +5,8 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
 
+  scope :of_followed_users, -> (following_users) { where user_id: following_users}
+
   validates :user_id, presence: true
   validates :image, presence: true
   validates :caption, presence: true, length: { minimum: 3, maximum: 300 }
