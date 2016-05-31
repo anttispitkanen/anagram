@@ -1,0 +1,15 @@
+<div class="dropdown notification-dropdown">
+  <button class="button btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="true">
+    <%= current_user.notifications.where(read: false).count %>
+    <span class="glyphicon glyphicon-flag"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li class="dropdown-header text-center">Notifications</li>
+    <%= render current_user.notifications.where(read: false).order('created_at DESC').last(5) %>
+    <li class="divider" role="separator">
+      <li class="text-center"><%= link_to 'view all', notifications_path %></li>
+    </li>
+
+  </ul>
+
+</div>

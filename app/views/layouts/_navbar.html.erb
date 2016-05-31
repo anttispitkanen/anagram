@@ -12,12 +12,18 @@
       <div class="navbar-brand">
         <%= link_to "Anagram", root_path %>
       </div>
+      <div class="navbar-brand">
+        <%= link_to "Explore", browse_path %>
+      </div>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li><%= render 'notifications/notification_dropdown' %></li>
+          <li><%= link_to current_user.user_name, profile_path(current_user.user_name) %></li>
           <li><%= link_to "New Post", new_post_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
