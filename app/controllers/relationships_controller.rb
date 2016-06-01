@@ -21,11 +21,5 @@ class RelationshipsController < ApplicationController
     end
   end
 
-  def follow_yourself
-    if current_user.follow(current_user.id)
-      flash[:success] = "Awesome first post!"
-    end
-  end
-
 
 end

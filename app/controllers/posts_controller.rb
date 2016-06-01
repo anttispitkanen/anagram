@@ -23,6 +23,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
 
     if @post.save
+      unless following_self?
+        id = current_user.id
+        Follow.create(follower_id: id, following_id: id)
+      end
       flash[:success] = "Your post has been created!"
       redirect_to posts_path
     else
@@ -85,6 +89,12 @@ class PostsController < ApplicationController
       flash[:alert] = "That post doesn't belong to you!"
       redirect_to root_path
     end
+  end
+
+  def following_self?
+    id = current_user.id
+    relationship = Follow.find_by(follower_id: id, following_id: id)
+    return true if relationship
   end
 
 end
