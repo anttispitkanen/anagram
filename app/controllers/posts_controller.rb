@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
 
     @posts = Post.of_followed_users(current_user.following).order('created_at DESC').page params[:page]
+    
   end
 
   def browse
@@ -23,6 +24,8 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
 
     if @post.save
+      #creating a following relationship for the user itself upon creating the first post
+      #therefore the user will see their own posts in the index view
       unless following_self?
         id = current_user.id
         Follow.create(follower_id: id, following_id: id)
