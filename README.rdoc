@@ -1,3 +1,10 @@
 == README
 
 This is my take on "Let's build Instagram from scratch with Ruby on Rails" by Ben Walker, devwalks.com.
+
+Tasks still to complete:
+-fixing "show more comments" on index and explore (browse) on pages 2..n of paginator
+-making the read/unread notifications stand out better
+-adding notifications for received likes
+-adding statistics to profiles
+-adding the follow/following button to posts (not just profiles)
