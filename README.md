@@ -1,6 +1,6 @@
-== README
+## README
 
-=Anagram
+#Anagram
 (Get it? Like Antti's Instagram? Super clever or what?)
 
 This is my take on [Let's build Instagram from scratch with Ruby on Rails][] by Ben Walker, devwalks.com.
