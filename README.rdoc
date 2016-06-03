@@ -3,7 +3,8 @@
 =Anagram
 (Get it? Like Antti's Instagram? Super clever or what?)
 
-This is my take on <a href="https://www.devwalks.com/lets-build-instagram-in-rails-part-1/">"Let's build Instagram from scratch with Ruby on Rails"</a> by Ben Walker, devwalks.com.
+This is my take on [Let's build Instagram from scratch with Ruby on Rails][] by Ben Walker, devwalks.com.
+[Let's build Instagram from scratch with Ruby on Rails]: https://www.devwalks.com/lets-build-instagram-in-rails-part-1/
 
 The app is (at least currently) running at [Heroku] (https://stormy-savannah-64012.herokuapp.com/), go check it out!
 
