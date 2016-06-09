@@ -35,7 +35,8 @@ $( document ).ready(function() {
 var Append = {};
 Append.open = false;
 function ClickableCommentsLink(){
-  $('.more-comments').click( function() {
+  //$('.more-comments').click( function() {
+  $(document).on('click', '.more-comments', function() {
     $(this).on('ajax:success', function(event, data, status,xhr) {
       event.preventDefault();
       var postId = $(this).data("post-id");

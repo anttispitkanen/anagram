@@ -9,7 +9,6 @@ This is my take on [Let's build Instagram from scratch with Ruby on Rails][] by 
 The app is (at least currently) running at [Heroku] (https://stormy-savannah-64012.herokuapp.com/), go check it out!
 
 Tasks still to complete:
-* fixing "show more comments" on index and explore (browse) on pages 2..n of paginator
 * making the read/unread notifications stand out better
 * adding notifications for received likes
 * adding statistics to profiles
